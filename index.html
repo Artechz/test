@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Calculadora salario neto</h1>
+
+        <h4>Rellena la siguiente información.</h4>
+
+        <div class="selector">
+            <label for="type">Salario bruto anual o mensual?</label>
+            <select name="type" id="type">
+                <option value="yearly">Anual</option>
+                <option value="monthly">Mensual</option>
+            </select>
+        </div>
+
+        <div class="selector">
+            <label for="paynum">Número de pagas?</label>
+            <select name="paynum" id="paynum">
+                <option value="12">12</option>
+                <option value="14">14</option>
+            </select>
+        </div>
+        
+        <div class="selector">
+            <label for="salarynum" name="salarynum_label">Salario bruto</label>
+            <input type="number" name="salarynum" id="salarynum">
+        </div>
+        <button onclick="load()">LOAD</button>
+
+        <div>
+            <button onclick="sayHi()">SAY HI</button>
+            <button onclick="sayBye()">SAY BYE</button>
+        </div>
+        
+        <h2 class="output">press the button</h2>
+
+        <h1 class="adios">Garcias</h1>
+ 
+    </div>
+
+    <img id="garcias" src="https://plantillasdememes.com/img/plantillas/garcias01605419397.jpg" alt="garcias">
+
+    <footer id="footer">Arnau Sanz © </footer>    
+
+    <script src="app.js"></script>
+</body>
+
+</html>
