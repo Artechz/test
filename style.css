@@ -16,6 +16,10 @@ body {
     height: 100vh;
 }
 
+.main {
+    padding: 10px;
+}
+
 h1 {
     color: rgb(24, 24, 24);
     margin-bottom: 20px;
@@ -25,6 +29,8 @@ h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 select {
@@ -34,9 +40,21 @@ select {
 
 label {
     cursor: pointer;
+    margin-right: 20px;
 }
 
 input {
+    margin-left: auto;
+    font-size: small;
+    width: 80px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.output {
     margin-left: auto;
 }
 
@@ -67,4 +85,12 @@ img {
 
 footer {
     font-size: small;
+}
+
+#footer {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
 }

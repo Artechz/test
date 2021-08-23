@@ -10,39 +10,75 @@
 
 <body>
 
-    <div>
+    <div class="main">
         <h1>Calculadora salario neto</h1>
 
-        <h4>Rellena la siguiente información.</h4>
-
+        <!-- <h4>Rellena la siguiente información.</h4> -->
         <div class="selector">
-            <label for="type">Salario bruto anual o mensual?</label>
-            <select name="type" id="type">
+            <label for="salaryType">Salario bruto anual o mensual?</label>
+            <select onchange="salaryInfoChange()" name="salaryType" id="salaryType">
                 <option value="yearly">Anual</option>
                 <option value="monthly">Mensual</option>
             </select>
         </div>
 
         <div class="selector">
-            <label for="paynum">Número de pagas?</label>
-            <select name="paynum" id="paynum">
-                <option value="12">12</option>
-                <option value="14">14</option>
+            <label for="payNum">Número de pagas?</label>
+            <select onchange="salaryInfoChange()" name="payNum" id="payNum">
+                <option value=12>12</option>
+                <option value=14>14</option>
+            </select>
+        </div>
+
+        <div class="selector">
+            <label for="userCA">Comunindad Autónoma en la que reside</label>
+            <select onchange="salaryInfoChange()" name="userCA" id="userCA">
+                <option value=0>Ninguna (extranjero)</option>
+                <option value=1>Catalunya</option>
             </select>
         </div>
         
         <div class="selector">
-            <label for="salarynum" name="salarynum_label">Salario bruto</label>
-            <input type="number" name="salarynum" id="salarynum">
+            <label for="salaryNum" name="salaryNum_label">Salario bruto</label>
+            <input onchange="salaryInfoChange()" type="number" name="salaryNum" id="salaryNum">
         </div>
-        <button onclick="load()">LOAD</button>
+        <!-- <button onclick="load()">LOAD</button>
 
         <div>
             <button onclick="sayHi()">SAY HI</button>
             <button onclick="sayBye()">SAY BYE</button>
         </div>
         
-        <h2 class="output">press the button</h2>
+        <h2 class="output">press the button</h2> -->
+
+        <hr noshade>
+
+        <div class="selector">
+            <p name="x1">Salario neto anual:</p>
+            <p name="x2" class="output">NaN</p>
+        </div>
+
+        <div class="selector">
+            <p name="x3">Retencioes IRPF:</p>
+            <p name="x4" class="output">NaN</p>
+        </div>
+        <div class="selector">
+            <p name="x3">Cuotas Seguridad Social:</p>
+            <p name="x4" class="output">NaN</p>
+        </div>
+        <div class="selector">
+            <p name="x5">Tipo de retención sobre la nómina:</p>
+            <p name="x6" class="output">NaN</p>
+        </div>
+        <div class="selector">
+            <p name="x7">Sueldo neto mensual:</p>
+            <p name="x8" class="output">NaN</p>
+        </div>
+        <div class="selector" name="extraPay">
+            <p name="x9">Paga extra:</p>
+            <p name="x10" class="output">NaN</p>
+        </div>
+        
 
         <h1 class="adios">Garcias</h1>
  
@@ -50,7 +86,9 @@
 
     <img id="garcias" src="https://plantillasdememes.com/img/plantillas/garcias01605419397.jpg" alt="garcias">
 
-    <footer id="footer">Arnau Sanz © </footer>    
+    <!-- <footer id="disclaimer">Datos actualizados en 2021 (ejercicio fiscal 2020). Fines informativos.</footer> 
+    <footer id="disclaimer">No es una aplicación oficial, ninguna entidad gubernamental está asociada con la misma.</footer> -->
+    <footer id="footer"><a href="https://github.com/Artechz" style="color: black;">Arnau Sanz</a> © </footer> <!--year updated by js-->
 
     <script src="app.js"></script>
 </body>
