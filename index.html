@@ -15,7 +15,7 @@
 
         <!-- <h4>Rellena la siguiente información.</h4> -->
         <div class="selector">
-            <label for="salaryType">Salario bruto anual o mensual?</label>
+            <label for="salaryType">Salario bruto anual o mensual:</label>
             <select onchange="salaryInfoChange()" name="salaryType" id="salaryType">
                 <option value="yearly">Anual</option>
                 <option value="monthly">Mensual</option>
@@ -23,15 +23,15 @@
         </div>
 
         <div class="selector">
-            <label for="payNum">Número de pagas?</label>
+            <label for="payNum">Número de pagas:</label>
             <select onchange="salaryInfoChange()" name="payNum" id="payNum">
                 <option value=12>12</option>
-                <option value=14>14</option>
+                <option selected="selected" value=14>14</option>
             </select>
         </div>
 
-        <div class="selector">
-            <label for="userCA">Comunindad Autónoma en la que reside</label>
+        <div class="selector NA">
+            <label for="userCA">Comunindad Autónoma en la que reside:</label>
             <select onchange="salaryInfoChange()" name="userCA" id="userCA">
                 <option value=0>Ninguna (extranjero)</option>
                 <option value=1>Catalunya</option>
@@ -39,9 +39,25 @@
         </div>
         
         <div class="selector">
-            <label for="salaryNum" name="salaryNum_label">Salario bruto</label>
+            <label for="salaryNum" name="salaryNum_label">Salario bruto:</label>
             <input onchange="salaryInfoChange()" type="number" name="salaryNum" id="salaryNum">
         </div>
+
+        <details class="NA selector">
+            <summary>Opciones avanzadas</summary>
+            <div class="selector">
+                <label for="childNum" name="childNum_label">Hijos menores de 25:</label>
+                <input onchange="salaryInfoChange()" type="number" name="childNum" id="childNum">
+            </div>
+            <div class="selector">
+                <label for="toddlerNum" name="toddlerNum_label">Hijos menores de 3:</label>
+                <input onchange="salaryInfoChange()" type="number" name="toddlerNum" id="toddlerNum">
+            </div>
+            <div class="selector">
+                <label for="exclusiveChild" name="exclusiveChild_label">Hijos en exclusiva a efectos fiscales:</label>
+                <input onchange="salaryInfoChange()" type="checkbox" name="exclusiveChild" id="exclusiveChild">
+            </div>
+        </details>
         <!-- <button onclick="load()">LOAD</button>
 
         <div>
@@ -51,36 +67,35 @@
         
         <h2 class="output">press the button</h2> -->
 
-        <hr noshade>
+        <hr>
 
         <div class="selector">
             <p name="x1">Salario neto anual:</p>
-            <p name="x2" class="output">NaN</p>
+            <p name="x2" class="output" id="salarioNetoAnual">NaN</p>
         </div>
 
         <div class="selector">
-            <p name="x3">Retencioes IRPF:</p>
-            <p name="x4" class="output">NaN</p>
+            <p name="x3">Retenciones <abbr title="Impuesto sobre la Renta de las Personas Físicas">IRPF</abbr>:</p>
+            <p name="x4" class="output" id="cuotaIRPF">NaN</p>
         </div>
         <div class="selector">
             <p name="x3">Cuotas Seguridad Social:</p>
-            <p name="x4" class="output">NaN</p>
+            <p name="x4" class="output" id="cuotaSS">NaN</p>
         </div>
         <div class="selector">
-            <p name="x5">Tipo de retención sobre la nómina:</p>
-            <p name="x6" class="output">NaN</p>
+            <p name="x5">Retención total sobre la nómina:</p>
+            <p name="x6" class="output" id="tipoTotal">NaN</p>
         </div>
         <div class="selector">
-            <p name="x7">Sueldo neto mensual:</p>
-            <p name="x8" class="output">NaN</p>
+            <p name="x7">Salario neto mensual:</p>
+            <p name="x8" class="output" id="salarioNetoMensual">NaN</p>
         </div>
-        <div class="selector" name="extraPay">
-            <p name="x9">Paga extra:</p>
-            <p name="x10" class="output">NaN</p>
+        <div class="selector" id="pagaExtraContainer">
+            <p name="x9" >Paga extra:</p>
+            <p name="x10" class="output" id="pagaExtra">NaN</p>
         </div>
-        
 
-        <h1 class="adios">Garcias</h1>
+        <!-- <h1 class="adios">garcias</h1> -->
  
     </div>
 

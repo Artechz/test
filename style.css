@@ -49,9 +49,17 @@ input {
     width: 80px;
 }
 
+#exclusiveChild {
+    font-size: large;
+    width: 14px;
+}
+
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
+    height: 2px;
+    background-color: rgb(34, 34, 34);
+    border: none;
 }
 
 .output {
@@ -93,4 +101,31 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+details > summary {
+    list-style-type: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+details > summary::before {
+    content: '▶️';
+    margin-right: 8px;
+
+}
+
+details[open] > summary::before {
+    content: '🔽';
+    margin-right: 8px;
+}
+
+.NA {
+    color: red;
+}
+
+.hidden {
+    display: none;
 }
